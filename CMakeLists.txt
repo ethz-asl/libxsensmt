@@ -8,7 +8,6 @@ remake_project(
   RELEASE beta
   SUMMARY "Xsens Device API (XDA)."
   AUTHOR "Xsens Technologies BV"
-  CONTACT "info@xsens.com"
   AUTHOR "Jerome Maye"
   CONTACT "jerome.maye@mavt.ethz.ch"
   HOME "https://github.com/jmaye/libXsensMT"
