@@ -33,7 +33,7 @@ remake_pkg_config_generate(EXTRA_LIBS
 
 remake_pack_deb(
   DESCRIPTION "Main library"
-  DEPENDS liblapack3gf
+  DEPENDS liblapack3g?f?
 )
 
 remake_pack_deb(
@@ -52,14 +52,6 @@ remake_pack_deb(
   COMPONENT doc
   DESCRIPTION "Documentation"
   DEPENDS libxsensmt
-)
-
-remake_distribute_deb(
-  DISTRIBUTION lucid
-  SECTION libs
-  UPLOAD ppa:jmaye/ethz
-  DEPENDS remake doxygen pkg-config liblapack-dev
-  PASS CMAKE_BUILD_TYPE LIBXSENSMT_GIT_REVISION
 )
 
 remake_distribute_deb(
