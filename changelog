@@ -1,4 +1,10 @@
-libXsensMt (4.2-2) precise; urgency=low
+libxsensmt (4.2-3) precise; urgency=low
+
+  * Bug in names.
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Mon, 22 Sep 2014 14:13:41 +0200
+
+libxsensmt (4.2-2) precise; urgency=low
 
   * Correcting version 
 
