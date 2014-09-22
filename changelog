@@ -1,3 +1,9 @@
+libxsensmt (4.2-6) precise; urgency=low
+
+  * other dep 
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Mon, 22 Sep 2014 14:53:41 +0200
+
 libxsensmt (4.2-5) precise; urgency=low
 
   * adding dep on lapack 

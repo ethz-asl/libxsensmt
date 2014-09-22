@@ -33,6 +33,7 @@ remake_pkg_config_generate(EXTRA_LIBS
 
 remake_pack_deb(
   DESCRIPTION "Main library"
+  DEPENDS liblapack3gf
 )
 
 remake_pack_deb(
