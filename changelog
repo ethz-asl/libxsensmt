@@ -1,3 +1,9 @@
+libxsensmt (4.2-8) precise; urgency=low
+
+  * debug try 
+
+ -- Jerome Maye <jerome.maye@mavt.ethz.ch>  Tue, 23 Sep 2014 16:15:23 +0200
+
 libxsensmt (4.2-7) precise; urgency=low
 
   * Correct dep for trusty 
