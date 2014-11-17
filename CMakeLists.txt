@@ -6,58 +6,52 @@ remake_project(
   libxsensmt
   VERSION 4.2
   RELEASE beta
-  SUMMARY "Xsens Device API (XDA)."
+  SUMMARY "Software development kit for Xsens motion tracking (MT) devices."
   AUTHOR "Xsens Technologies BV"
-  AUTHOR "Jerome Maye"
-  CONTACT "jerome.maye@mavt.ethz.ch"
-  HOME "https://github.com/jmaye/libXsensMT"
+  CONTACT "info@xsens.com"
+  HOME "https://www.xsens.com/mt-software-suite"
   LICENSE "MT SDK Software License Agreement"
-  PREFIX XsensMt-
-  INSTALL /usr/
-  EXTRA_CXX_FLAGS -std=c++0x
+  PREFIX xsensmt-
+  INSTALL /usr
 )
 
 remake_doc(
   html
-  latex
   vendor
 )
 
-remake_add_directories(
-  lib
-)
+remake_add_directories(lib)
 
+remake_project_get(LIBRARY_DESTINATION DESTINATION)
 remake_pkg_config_generate(EXTRA_LIBS
-  -L${CMAKE_INSTALL_PREFIX}/${LIBXSENSMT_LIBRARY_DESTINATION} -lxsensdeviceapi
-  -lxstypes)
+  -L${LIBRARY_DESTINATION} -lxsensdeviceapi -lxstypes)
 
 remake_pack_deb(
-  DESCRIPTION "Main library"
   DEPENDS liblapack3g?f?
 )
 
 remake_pack_deb(
   COMPONENT dev
-  DESCRIPTION "Development headers"
+  DESCRIPTION "development headers"
   DEPENDS libxsensmt
 )
 
 remake_pack_deb(
   COMPONENT examples
-  DESCRIPTION "Examples"
+  DESCRIPTION "examples"
   DEPENDS libxsensmt
 )
 
 remake_pack_deb(
   COMPONENT doc
-  DESCRIPTION "Documentation"
+  DESCRIPTION "documentation"
   DEPENDS libxsensmt
 )
 
 remake_distribute_deb(
   DISTRIBUTION precise
   SECTION libs
-  UPLOAD ppa:jmaye/ethz
+  UPLOAD ppa:ethz-asl/common
   DEPENDS remake doxygen pkg-config liblapack-dev
   PASS CMAKE_BUILD_TYPE LIBXSENSMT_GIT_REVISION
 )
@@ -65,7 +59,7 @@ remake_distribute_deb(
 remake_distribute_deb(
   DISTRIBUTION trusty
   SECTION libs
-  UPLOAD ppa:jmaye/ethz
+  UPLOAD ppa:ethz-asl/common
   DEPENDS remake doxygen pkg-config liblapack-dev
   PASS CMAKE_BUILD_TYPE LIBXSENSMT_GIT_REVISION
 )

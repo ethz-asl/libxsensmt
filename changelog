@@ -1,3 +1,11 @@
+libxsensmt (4.2-10) precise; urgency=low
+
+  * Complemented doxygen documentation by main and license documents
+  * Updated copyright information
+  * Fixed build system configuration
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Mon, 17 Nov 2014 11:25:00 +0200
+
 libxsensmt (4.2-9) precise; urgency=low
 
   * Correcting headers 
