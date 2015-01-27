@@ -1,3 +1,9 @@
+libxsensmt (4.2-11) precise; urgency=low
+
+  * Changed PPA
+
+ -- Ralf Kaestner <ralf.kaestner@gmail.com>  Tue, 27 Jan 2015 12:58:00 +0200
+
 libxsensmt (4.2-10) precise; urgency=low
 
   * Complemented doxygen documentation by main and license documents
